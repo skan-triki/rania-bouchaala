@@ -97,6 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   }
 
+  // --- Bouton formulaire loading ---
+  const contactForm = document.querySelector('.contact-form');
+  const submitBtn = document.getElementById('submitBtn');
+  if (contactForm && submitBtn) {
+    contactForm.addEventListener('submit', () => {
+      submitBtn.disabled = true;
+      contactForm.classList.add('form-loading');
+    });
+  }
+
   // --- Navbar active link ---
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
