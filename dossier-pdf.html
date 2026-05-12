@@ -95,49 +95,49 @@
     }
 
     /* === CV === */
-    .cv-section { margin-bottom: 4.5mm; }
+    .cv-section { margin-bottom: 6mm; }
     .cv-section-title {
       font-family: var(--font-serif); font-size: 10pt; font-weight: 600;
       color: var(--c-terre); text-transform: uppercase; letter-spacing: 1.5px;
-      margin-bottom: 2.5mm; padding-bottom: 1mm;
+      margin-bottom: 3mm; padding-bottom: 1.5mm;
       border-bottom: 1px solid var(--c-gris-light);
     }
     .cv-intro {
-      font-size: 9.5pt; color: var(--c-gris); line-height: 1.55;
+      font-size: 9.5pt; color: var(--c-gris); line-height: 1.6;
     }
 
-    .cv-grid { display: grid; grid-template-columns: 30mm 1fr; gap: 0 3mm; }
+    .cv-grid { display: grid; grid-template-columns: 30mm 1fr; gap: 2.5mm 4mm; }
     .cv-date {
       font-size: 8.5pt; color: var(--c-gris); font-weight: 500;
       text-align: right; padding-top: 0.5mm;
     }
-    .cv-item { margin-bottom: 3mm; }
+    .cv-item { margin-bottom: 4mm; }
     .cv-item:last-child { margin-bottom: 0; }
     .cv-item-title {
       font-size: 9.5pt; font-weight: 600; color: var(--c-charbon);
-      margin-bottom: 0.5mm;
+      margin-bottom: 0.8mm;
     }
     .cv-item-place {
-      font-size: 8.5pt; color: var(--c-terre); font-weight: 500; margin-bottom: 0.5mm;
+      font-size: 8.5pt; color: var(--c-terre); font-weight: 500; margin-bottom: 0.8mm;
     }
     .cv-item-desc {
-      font-size: 8.5pt; color: var(--c-gris); line-height: 1.45;
+      font-size: 8.5pt; color: var(--c-gris); line-height: 1.5;
     }
 
-    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
-    .cv-skills-group { margin-bottom: 2.5mm; }
+    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; align-items: start; }
+    .cv-skills-group { margin-bottom: 4mm; }
     .cv-skills-group:last-child { margin-bottom: 0; }
     .cv-skills-label {
       font-size: 8.5pt; font-weight: 600; color: var(--c-charbon);
-      margin-bottom: 1mm;
+      margin-bottom: 1.5mm;
     }
     .cv-skills-list {
-      display: flex; flex-wrap: wrap; gap: 1.5mm 2mm;
+      display: flex; flex-wrap: wrap; gap: 2mm 2.5mm;
     }
     .cv-skill-tag {
       font-size: 8pt; color: var(--c-gris);
       background: rgba(199,141,91,0.05);
-      padding: 1mm 2.5mm; border-radius: 2px;
+      padding: 1.2mm 3mm; border-radius: 2px;
       border: 1px solid rgba(199,141,91,0.1);
     }
     .cv-skill-tag.lang {
@@ -148,11 +148,11 @@
     .cv-highlight {
       background: linear-gradient(135deg, rgba(199,141,91,0.04), rgba(199,141,91,0.01));
       border-left: 2.5px solid var(--c-terre); border-radius: 0 3px 3px 0;
-      padding: 2.5mm 3.5mm; margin: 3mm 0 4.5mm;
+      padding: 3mm 4mm; margin: 3mm 0 6mm;
     }
     .cv-highlight-text {
       font-family: var(--font-serif); font-size: 10pt; font-style: italic;
-      color: var(--c-charbon); line-height: 1.45;
+      color: var(--c-charbon); line-height: 1.5;
     }
 
     /* Print */
@@ -180,10 +180,6 @@
     </div>
 
     <div class="content">
-      <div class="letter-meta">
-        À l'attention des recruteurs en enseignement du FLE
-      </div>
-
       <div class="letter-salutation">Madame, Monsieur,</div>
 
       <div class="letter-body">
