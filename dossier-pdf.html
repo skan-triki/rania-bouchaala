@@ -62,7 +62,7 @@
     .header-contact a { color: var(--c-gris); text-decoration: none; }
 
     /* === CONTENT === */
-    .content { padding: 0 18mm 22mm; }
+    .content { padding: 0 18mm 10mm; }
 
     /* === LETTRE === */
     .letter-meta {
@@ -85,7 +85,7 @@
       font-style: italic; color: var(--c-charbon);
     }
     .page-footer {
-      position: absolute; bottom: 6mm; left: 18mm; right: 18mm;
+      padding: 4mm 18mm 8mm;
       display: flex; align-items: center; gap: 6mm;
       font-size: 7.5pt; color: var(--c-gris-light);
     }
@@ -95,49 +95,49 @@
     }
 
     /* === CV === */
-    .cv-section { margin-bottom: 6mm; }
+    .cv-section { margin-bottom: 4.5mm; }
     .cv-section-title {
       font-family: var(--font-serif); font-size: 10pt; font-weight: 600;
       color: var(--c-terre); text-transform: uppercase; letter-spacing: 1.5px;
-      margin-bottom: 3mm; padding-bottom: 1.5mm;
+      margin-bottom: 2.5mm; padding-bottom: 1mm;
       border-bottom: 1px solid var(--c-gris-light);
     }
     .cv-intro {
-      font-size: 9.5pt; color: var(--c-gris); line-height: 1.6;
+      font-size: 9.5pt; color: var(--c-gris); line-height: 1.55;
     }
 
-    .cv-grid { display: grid; grid-template-columns: 30mm 1fr; gap: 2.5mm 4mm; }
+    .cv-grid { display: grid; grid-template-columns: 30mm 1fr; gap: 1.5mm 4mm; }
     .cv-date {
       font-size: 8.5pt; color: var(--c-gris); font-weight: 500;
       text-align: right; padding-top: 0.5mm;
     }
-    .cv-item { margin-bottom: 4mm; }
+    .cv-item { margin-bottom: 3mm; }
     .cv-item:last-child { margin-bottom: 0; }
     .cv-item-title {
       font-size: 9.5pt; font-weight: 600; color: var(--c-charbon);
-      margin-bottom: 0.8mm;
+      margin-bottom: 0.5mm;
     }
     .cv-item-place {
-      font-size: 8.5pt; color: var(--c-terre); font-weight: 500; margin-bottom: 0.8mm;
+      font-size: 8.5pt; color: var(--c-terre); font-weight: 500; margin-bottom: 0.5mm;
     }
     .cv-item-desc {
-      font-size: 8.5pt; color: var(--c-gris); line-height: 1.5;
+      font-size: 8.5pt; color: var(--c-gris); line-height: 1.45;
     }
 
-    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; align-items: start; margin-bottom: 4mm; }
-    .cv-skills-group { margin-bottom: 4mm; }
+    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; align-items: start; margin-bottom: 0; }
+    .cv-skills-group { margin-bottom: 2.5mm; }
     .cv-skills-group:last-child { margin-bottom: 0; }
     .cv-skills-label {
       font-size: 8.5pt; font-weight: 600; color: var(--c-charbon);
-      margin-bottom: 1.5mm;
+      margin-bottom: 1mm;
     }
     .cv-skills-list {
-      display: flex; flex-wrap: wrap; gap: 2mm 2.5mm;
+      display: flex; flex-wrap: wrap; gap: 1.5mm 2mm;
     }
     .cv-skill-tag {
       font-size: 8pt; color: var(--c-gris);
       background: rgba(199,141,91,0.05);
-      padding: 1.2mm 3mm; border-radius: 2px;
+      padding: 1mm 2.5mm; border-radius: 2px;
       border: 1px solid rgba(199,141,91,0.1);
     }
     .cv-skill-tag.lang {
@@ -148,11 +148,11 @@
     .cv-highlight {
       background: linear-gradient(135deg, rgba(199,141,91,0.04), rgba(199,141,91,0.01));
       border-left: 2.5px solid var(--c-terre); border-radius: 0 3px 3px 0;
-      padding: 3mm 4mm; margin: 3mm 0 6mm;
+      padding: 2.5mm 3.5mm; margin: 2mm 0 4.5mm;
     }
     .cv-highlight-text {
       font-family: var(--font-serif); font-size: 10pt; font-style: italic;
-      color: var(--c-charbon); line-height: 1.5;
+      color: var(--c-charbon); line-height: 1.45;
     }
 
     /* Print */
@@ -281,7 +281,7 @@
         </div>
       </div>
 
-      <div class="cv-two-col">
+      <div class="cv-two-col" style="margin-top:2mm;">
         <div class="cv-section">
           <div class="cv-section-title">Langues</div>
           <div class="cv-skills-group">
