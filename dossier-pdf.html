@@ -111,6 +111,11 @@
       font-size: 8.5pt; color: var(--c-gris); font-weight: 500;
       text-align: right; padding-top: 0.5mm;
     }
+
+    .cv-exp-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 6mm;
+    }
+    .cv-exp-col .cv-date { text-align: left; padding-top: 0; margin-bottom: 1mm; }
     .cv-item { margin-bottom: 3mm; }
     .cv-item:last-child { margin-bottom: 0; }
     .cv-item-title {
@@ -233,33 +238,41 @@
 
       <div class="cv-section">
         <div class="cv-section-title">Expérience</div>
-        <div class="cv-grid">
-          <div class="cv-date">2020 — 2024</div>
-          <div class="cv-item">
-            <div class="cv-item-title">Formatrice en alphabétisation et FLE</div>
-            <div class="cv-item-place">Structure associative, Bruxelles</div>
-            <div class="cv-item-desc">Accompagnement de primo-arrivants et de publics en situation d'illettrisme. Gestion des supports pédagogiques sur Google Drive. Pédagogie différenciée sans référent scolaire.</div>
+        <div class="cv-exp-grid">
+          <div class="cv-exp-col">
+            <div class="cv-date">2020 — 2024</div>
+            <div class="cv-item">
+              <div class="cv-item-title">Formatrice en alphabétisation et FLE</div>
+              <div class="cv-item-place">Structure associative, Bruxelles</div>
+              <div class="cv-item-desc">Accompagnement de primo-arrivants et de publics en situation d'illettrisme. Gestion des supports pédagogiques sur Google Drive.</div>
+            </div>
           </div>
 
-          <div class="cv-date">2017 — 2018</div>
-          <div class="cv-item">
-            <div class="cv-item-title">Agente de voyage</div>
-            <div class="cv-item-place">Agence de tourisme international</div>
-            <div class="cv-item-desc">Organisation de voyages touristiques internationaux. Maîtrise du français de l'accueil et des affaires.</div>
+          <div class="cv-exp-col">
+            <div class="cv-date">2017 — 2018</div>
+            <div class="cv-item">
+              <div class="cv-item-title">Agente de voyage</div>
+              <div class="cv-item-place">Agence de tourisme international</div>
+              <div class="cv-item-desc">Organisation de voyages touristiques internationaux. Maîtrise du français de l'accueil et des affaires.</div>
+            </div>
           </div>
 
-          <div class="cv-date">2015 — 2017</div>
-          <div class="cv-item">
-            <div class="cv-item-title">Enseignante de français</div>
-            <div class="cv-item-place">Établissements scolaires</div>
-            <div class="cv-item-desc">Enseignement du français langue première et seconde au primaire (5e année), au collège et au lycée. Construction des fondamentaux, acquisition des structures complexes.</div>
+          <div class="cv-exp-col">
+            <div class="cv-date">2015 — 2017</div>
+            <div class="cv-item">
+              <div class="cv-item-title">Enseignante de français</div>
+              <div class="cv-item-place">Établissements scolaires</div>
+              <div class="cv-item-desc">Enseignement du français langue première et seconde au primaire, collège et lycée.</div>
+            </div>
           </div>
 
-          <div class="cv-date">2013 — 2014</div>
-          <div class="cv-item">
-            <div class="cv-item-title">Enseignante bilingue français-arabe</div>
-            <div class="cv-item-place">École primaire</div>
-            <div class="cv-item-desc">Enseignement du français et de l'arabe classique. Approche contrastive et immersion.</div>
+          <div class="cv-exp-col">
+            <div class="cv-date">2013 — 2014</div>
+            <div class="cv-item">
+              <div class="cv-item-title">Enseignante bilingue français-arabe</div>
+              <div class="cv-item-place">École primaire</div>
+              <div class="cv-item-desc">Enseignement du français et de l'arabe classique. Approche contrastive et immersion.</div>
+            </div>
           </div>
         </div>
       </div>
