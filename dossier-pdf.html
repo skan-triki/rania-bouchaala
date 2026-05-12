@@ -19,152 +19,140 @@
       --font-sans:    'Inter', system-ui, sans-serif;
     }
 
-    @page {
-      size: A4;
-      margin: 0;
-    }
+    @page { size: A4; margin: 0; }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: var(--font-sans);
-      color: var(--c-charbon);
-      background: #ccc;
-      line-height: 1.6;
-      font-size: 10.5pt;
+      font-family: var(--font-sans); color: var(--c-charbon);
+      background: #bbb; line-height: 1.5; font-size: 10pt;
       -webkit-font-smoothing: antialiased;
     }
 
     .page {
-      width: 210mm;
-      min-height: 297mm;
-      max-height: 297mm;
-      margin: 0 auto 20px;
-      background: var(--c-blanc);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      width: 210mm; min-height: 297mm; max-height: 297mm;
+      margin: 0 auto 15px; background: var(--c-blanc);
+      position: relative; overflow: hidden;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.12);
       page-break-after: always;
     }
     .page:last-child { page-break-after: auto; margin-bottom: 0; }
 
-    /* En-tête commun */
+    /* === HEADER === */
     .header-bar {
-      height: 6px;
-      background: linear-gradient(90deg, var(--c-terre), var(--c-ocre), var(--c-terre));
+      height: 4px;
+      background: linear-gradient(90deg, var(--c-terre) 0%, var(--c-ocre) 50%, var(--c-terre) 100%);
     }
     .header-content {
-      padding: 28mm 22mm 16mm;
-      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 18mm 18mm 10mm;
+      display: flex; justify-content: space-between; align-items: baseline;
+      border-bottom: 1px solid var(--c-gris-light);
     }
     .header-name {
-      font-family: var(--font-serif); font-size: 22pt; font-weight: 600;
-      color: var(--c-charbon); letter-spacing: -0.5px;
+      font-family: var(--font-serif); font-size: 20pt; font-weight: 600;
+      color: var(--c-charbon); letter-spacing: -0.3px; line-height: 1.1;
     }
     .header-title {
-      font-size: 9.5pt; color: var(--c-terre); font-weight: 600;
-      text-transform: uppercase; letter-spacing: 1.5px; margin-top: 3px;
+      font-size: 8.5pt; color: var(--c-terre); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1.8px; margin-top: 2px;
     }
     .header-contact {
-      text-align: right; font-size: 9pt; color: var(--c-gris); line-height: 1.8;
+      text-align: right; font-size: 8.5pt; color: var(--c-gris); line-height: 1.7;
     }
     .header-contact a { color: var(--c-gris); text-decoration: none; }
 
-    /* Contenu */
-    .content { padding: 0 22mm 22mm; }
+    /* === CONTENT === */
+    .content { padding: 0 18mm 14mm; }
 
-    /* === LETTRE DE MOTIVATION === */
+    /* === LETTRE === */
     .letter-meta {
-      font-size: 9pt; color: var(--c-gris); margin-bottom: 18mm;
-      line-height: 1.7;
+      font-size: 8.5pt; color: var(--c-gris); margin-bottom: 10mm; line-height: 1.6;
     }
     .letter-salutation {
-      font-family: var(--font-serif); font-size: 12pt;
-      color: var(--c-terre); margin-bottom: 5mm;
+      font-family: var(--font-serif); font-size: 11pt;
+      color: var(--c-terre); margin-bottom: 4mm;
     }
     .letter-body p {
-      margin-bottom: 4.5mm; text-align: justify; hyphens: auto;
+      margin-bottom: 3.5mm; text-align: justify; hyphens: auto;
     }
     .letter-body p:first-child::first-letter {
-      font-family: var(--font-serif); font-size: 28pt; float: left;
-      line-height: 0.8; padding-right: 6px; padding-top: 4px;
+      font-family: var(--font-serif); font-size: 26pt; float: left;
+      line-height: 0.75; padding-right: 5px; padding-top: 3px;
       color: var(--c-terre);
     }
     .letter-signature {
-      margin-top: 10mm; font-family: var(--font-serif); font-size: 13pt;
+      margin-top: 8mm; font-family: var(--font-serif); font-size: 12pt;
       font-style: italic; color: var(--c-charbon);
     }
-    .letter-footer {
-      position: absolute; bottom: 14mm; left: 22mm; right: 22mm;
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 8pt; color: var(--c-gris-light);
+    .page-footer {
+      position: absolute; bottom: 8mm; left: 18mm; right: 18mm;
+      display: flex; align-items: center; gap: 6mm;
+      font-size: 7.5pt; color: var(--c-gris-light);
     }
-    .letter-footer-bar {
-      height: 2px; flex: 1; margin-right: 10mm;
-      background: linear-gradient(90deg, var(--c-terre), transparent);
+    .page-footer-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--c-gris-light), transparent);
     }
 
     /* === CV === */
-    .cv-section { margin-bottom: 5.5mm; }
+    .cv-section { margin-bottom: 4.5mm; }
     .cv-section-title {
-      font-family: var(--font-serif); font-size: 11pt; font-weight: 600;
+      font-family: var(--font-serif); font-size: 10pt; font-weight: 600;
       color: var(--c-terre); text-transform: uppercase; letter-spacing: 1.5px;
-      margin-bottom: 3mm; padding-bottom: 1.5mm;
-      border-bottom: 1.5px solid var(--c-gris-light);
-      display: inline-block; width: 100%;
+      margin-bottom: 2.5mm; padding-bottom: 1mm;
+      border-bottom: 1px solid var(--c-gris-light);
     }
     .cv-intro {
-      font-size: 10pt; color: var(--c-gris); line-height: 1.65;
-      margin-bottom: 5mm;
+      font-size: 9.5pt; color: var(--c-gris); line-height: 1.55;
     }
 
-    .cv-grid { display: grid; grid-template-columns: 34mm 1fr; gap: 0 4mm; }
+    .cv-grid { display: grid; grid-template-columns: 30mm 1fr; gap: 0 3mm; }
     .cv-date {
-      font-size: 9pt; color: var(--c-gris); font-weight: 500;
-      text-align: right; padding-top: 0.8mm;
+      font-size: 8.5pt; color: var(--c-gris); font-weight: 500;
+      text-align: right; padding-top: 0.5mm;
     }
-    .cv-item { margin-bottom: 4mm; }
+    .cv-item { margin-bottom: 3mm; }
     .cv-item:last-child { margin-bottom: 0; }
     .cv-item-title {
-      font-size: 10pt; font-weight: 600; color: var(--c-charbon);
-      margin-bottom: 0.8mm;
+      font-size: 9.5pt; font-weight: 600; color: var(--c-charbon);
+      margin-bottom: 0.5mm;
     }
     .cv-item-place {
-      font-size: 9pt; color: var(--c-terre); font-weight: 500; margin-bottom: 1mm;
+      font-size: 8.5pt; color: var(--c-terre); font-weight: 500; margin-bottom: 0.5mm;
     }
     .cv-item-desc {
-      font-size: 9pt; color: var(--c-gris); line-height: 1.55;
+      font-size: 8.5pt; color: var(--c-gris); line-height: 1.45;
     }
 
-    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
-    .cv-skills-group { margin-bottom: 3mm; }
+    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+    .cv-skills-group { margin-bottom: 2.5mm; }
     .cv-skills-group:last-child { margin-bottom: 0; }
     .cv-skills-label {
-      font-size: 9pt; font-weight: 600; color: var(--c-charbon);
-      margin-bottom: 1.5mm;
+      font-size: 8.5pt; font-weight: 600; color: var(--c-charbon);
+      margin-bottom: 1mm;
     }
     .cv-skills-list {
-      display: flex; flex-wrap: wrap; gap: 2mm 3mm;
+      display: flex; flex-wrap: wrap; gap: 1.5mm 2mm;
     }
     .cv-skill-tag {
-      font-size: 8.5pt; color: var(--c-gris); background: rgba(199,141,91,0.06);
-      padding: 1.5mm 3mm; border-radius: 3px; border: 1px solid rgba(199,141,91,0.12);
+      font-size: 8pt; color: var(--c-gris);
+      background: rgba(199,141,91,0.05);
+      padding: 1mm 2.5mm; border-radius: 2px;
+      border: 1px solid rgba(199,141,91,0.1);
     }
-    .cv-skill-tag.lang { color: var(--c-arabe); border-color: rgba(91,140,122,0.15); background: rgba(91,140,122,0.05); }
+    .cv-skill-tag.lang {
+      color: var(--c-arabe); border-color: rgba(91,140,122,0.12);
+      background: rgba(91,140,122,0.04);
+    }
 
     .cv-highlight {
       background: linear-gradient(135deg, rgba(199,141,91,0.04), rgba(199,141,91,0.01));
-      border-left: 3px solid var(--c-terre); border-radius: 0 4px 4px 0;
-      padding: 3mm 4mm; margin: 4mm 0 5mm;
+      border-left: 2.5px solid var(--c-terre); border-radius: 0 3px 3px 0;
+      padding: 2.5mm 3.5mm; margin: 3mm 0 4.5mm;
     }
     .cv-highlight-text {
-      font-family: var(--font-serif); font-size: 10.5pt; font-style: italic;
-      color: var(--c-charbon); line-height: 1.5;
-    }
-
-    .cv-footer {
-      position: absolute; bottom: 10mm; left: 22mm; right: 22mm;
-      text-align: center; font-size: 8pt; color: var(--c-gris-light);
+      font-family: var(--font-serif); font-size: 10pt; font-style: italic;
+      color: var(--c-charbon); line-height: 1.45;
     }
 
     /* Print */
@@ -215,8 +203,8 @@
       <div class="letter-signature">Rania Bouchaala</div>
     </div>
 
-    <div class="letter-footer">
-      <div class="letter-footer-bar"></div>
+    <div class="page-footer">
+      <div class="page-footer-line"></div>
       <span>Lettre de motivation — 2026</span>
     </div>
   </div>
@@ -236,7 +224,6 @@
     </div>
 
     <div class="content">
-      <!-- Intro -->
       <div class="cv-highlight">
         <p class="cv-highlight-text">«&nbsp;Accompagner chaque apprenant dans la maîtrise du français — de l'alphabétisation à la certification, avec humanité et exigence.&nbsp;»</p>
       </div>
@@ -353,8 +340,9 @@
       </div>
     </div>
 
-    <div class="cv-footer">
-      Curriculum Vitae — Rania Bouchaala — 2026
+    <div class="page-footer">
+      <div class="page-footer-line"></div>
+      <span>Curriculum Vitae — Rania Bouchaala — 2026</span>
     </div>
   </div>
 
