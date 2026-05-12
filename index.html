@@ -250,7 +250,7 @@
             Vous cherchez un soutien scolaire pour vos enfants ?
           </p>
           <p class="contact-body">
-            Chaque apprenant a droit à un enseignement qui lui convienne. Contactez-moi
+            Chaque apprenant a droit à un enseignement qui lui convienne. Envoyez-moi un message
             et je vous proposerai une méthode adaptée à vos objectifs.
           </p>
           <div class="contact-details">
@@ -258,9 +258,26 @@
             <span class="contact-location">Bruxelles, Belgique</span>
           </div>
         </div>
-        <div class="contact-cta">
-          <a href="mailto:bouchaalarania@gmail.com" class="btn btn-primary btn-large">Envoyer un email</a>
-          <p class="contact-note">Réponse sous 24 heures ouvrées.</p>
+        <div class="contact-form-wrap">
+          <form action="https://formsubmit.co/bouchaalarania@gmail.com" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="Nouveau message — Site FLE Rania Bouchaala">
+            <input type="hidden" name="_next" value="https://skan-triki.github.io/rania-bouchaala/">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-large btn-full">Envoyer le message</button>
+            <p class="contact-note">Réponse sous 24 heures ouvrées.</p>
+          </form>
         </div>
       </div>
     </div>
