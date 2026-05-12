@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rania Bouchaala — Dossier de candidature FLE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --c-creme:      #FAF6F1;
+      --c-blanc:      #FFFFFF;
+      --c-terre:      #C78D5B;
+      --c-terre-dark: #A66D3E;
+      --c-ocre:       #D4A76A;
+      --c-charbon:    #1E1E1E;
+      --c-gris:       #6B6B6B;
+      --c-gris-light: #E8E3DD;
+      --c-arabe:      #5B8C7A;
+      --font-serif:   'Playfair Display', Georgia, serif;
+      --font-sans:    'Inter', system-ui, sans-serif;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--c-charbon);
+      background: #ccc;
+      line-height: 1.6;
+      font-size: 10.5pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 0 auto 20px;
+      background: var(--c-blanc);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; margin-bottom: 0; }
+
+    /* En-tête commun */
+    .header-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--c-terre), var(--c-ocre), var(--c-terre));
+    }
+    .header-content {
+      padding: 28mm 22mm 16mm;
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .header-name {
+      font-family: var(--font-serif); font-size: 22pt; font-weight: 600;
+      color: var(--c-charbon); letter-spacing: -0.5px;
+    }
+    .header-title {
+      font-size: 9.5pt; color: var(--c-terre); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1.5px; margin-top: 3px;
+    }
+    .header-contact {
+      text-align: right; font-size: 9pt; color: var(--c-gris); line-height: 1.8;
+    }
+    .header-contact a { color: var(--c-gris); text-decoration: none; }
+
+    /* Contenu */
+    .content { padding: 0 22mm 22mm; }
+
+    /* === LETTRE DE MOTIVATION === */
+    .letter-meta {
+      font-size: 9pt; color: var(--c-gris); margin-bottom: 18mm;
+      line-height: 1.7;
+    }
+    .letter-salutation {
+      font-family: var(--font-serif); font-size: 12pt;
+      color: var(--c-terre); margin-bottom: 5mm;
+    }
+    .letter-body p {
+      margin-bottom: 4.5mm; text-align: justify; hyphens: auto;
+    }
+    .letter-body p:first-child::first-letter {
+      font-family: var(--font-serif); font-size: 28pt; float: left;
+      line-height: 0.8; padding-right: 6px; padding-top: 4px;
+      color: var(--c-terre);
+    }
+    .letter-signature {
+      margin-top: 10mm; font-family: var(--font-serif); font-size: 13pt;
+      font-style: italic; color: var(--c-charbon);
+    }
+    .letter-footer {
+      position: absolute; bottom: 14mm; left: 22mm; right: 22mm;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 8pt; color: var(--c-gris-light);
+    }
+    .letter-footer-bar {
+      height: 2px; flex: 1; margin-right: 10mm;
+      background: linear-gradient(90deg, var(--c-terre), transparent);
+    }
+
+    /* === CV === */
+    .cv-section { margin-bottom: 5.5mm; }
+    .cv-section-title {
+      font-family: var(--font-serif); font-size: 11pt; font-weight: 600;
+      color: var(--c-terre); text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 3mm; padding-bottom: 1.5mm;
+      border-bottom: 1.5px solid var(--c-gris-light);
+      display: inline-block; width: 100%;
+    }
+    .cv-intro {
+      font-size: 10pt; color: var(--c-gris); line-height: 1.65;
+      margin-bottom: 5mm;
+    }
+
+    .cv-grid { display: grid; grid-template-columns: 34mm 1fr; gap: 0 4mm; }
+    .cv-date {
+      font-size: 9pt; color: var(--c-gris); font-weight: 500;
+      text-align: right; padding-top: 0.8mm;
+    }
+    .cv-item { margin-bottom: 4mm; }
+    .cv-item:last-child { margin-bottom: 0; }
+    .cv-item-title {
+      font-size: 10pt; font-weight: 600; color: var(--c-charbon);
+      margin-bottom: 0.8mm;
+    }
+    .cv-item-place {
+      font-size: 9pt; color: var(--c-terre); font-weight: 500; margin-bottom: 1mm;
+    }
+    .cv-item-desc {
+      font-size: 9pt; color: var(--c-gris); line-height: 1.55;
+    }
+
+    .cv-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+    .cv-skills-group { margin-bottom: 3mm; }
+    .cv-skills-group:last-child { margin-bottom: 0; }
+    .cv-skills-label {
+      font-size: 9pt; font-weight: 600; color: var(--c-charbon);
+      margin-bottom: 1.5mm;
+    }
+    .cv-skills-list {
+      display: flex; flex-wrap: wrap; gap: 2mm 3mm;
+    }
+    .cv-skill-tag {
+      font-size: 8.5pt; color: var(--c-gris); background: rgba(199,141,91,0.06);
+      padding: 1.5mm 3mm; border-radius: 3px; border: 1px solid rgba(199,141,91,0.12);
+    }
+    .cv-skill-tag.lang { color: var(--c-arabe); border-color: rgba(91,140,122,0.15); background: rgba(91,140,122,0.05); }
+
+    .cv-highlight {
+      background: linear-gradient(135deg, rgba(199,141,91,0.04), rgba(199,141,91,0.01));
+      border-left: 3px solid var(--c-terre); border-radius: 0 4px 4px 0;
+      padding: 3mm 4mm; margin: 4mm 0 5mm;
+    }
+    .cv-highlight-text {
+      font-family: var(--font-serif); font-size: 10.5pt; font-style: italic;
+      color: var(--c-charbon); line-height: 1.5;
+    }
+
+    .cv-footer {
+      position: absolute; bottom: 10mm; left: 22mm; right: 22mm;
+      text-align: center; font-size: 8pt; color: var(--c-gris-light);
+    }
+
+    /* Print */
+    @media print {
+      body { background: none; }
+      .page { box-shadow: none; margin: 0; page-break-after: always; }
+      .page:last-child { page-break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== PAGE 1 : LETTRE DE MOTIVATION ========== -->
+  <div class="page">
+    <div class="header-bar"></div>
+    <div class="header-content">
+      <div>
+        <div class="header-name">Rania Bouchaala</div>
+        <div class="header-title">Enseignante de FLE & Formatrice en alphabétisation</div>
+      </div>
+      <div class="header-contact">
+        Bruxelles, Belgique<br>
+        <a href="mailto:bouchaalarania@gmail.com">bouchaalarania@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="letter-meta">
+        À l'attention des recruteurs en enseignement du FLE
+      </div>
+
+      <div class="letter-salutation">Madame, Monsieur,</div>
+
+      <div class="letter-body">
+        <p>Quand je donne cours, peu importe l'âge ou l'origine de l'apprenant, je m'efforce de rendre l'enseignement utile à son quotidien afin qu'il puisse progresser dans la société. Depuis mes débuts en tant qu'enseignante, en 2013, j'ai eu la chance de transmettre mon savoir à des personnes issues de cultures et de milieux sociaux divers.</p>
+
+        <p>À mes yeux, l'enseignement ne se limite pas à la transmission d'une matière. Il doit également véhiculer de l'humanité. C'est un lieu d'échange où l'on prend le temps d'accompagner les apprenants à travers leurs épreuves, y compris la barrière de la langue. Cet espace est une mosaïque de cultures qui m'enrichit personnellement et professionnellement.</p>
+
+        <p>Face à mes élèves, je me fais également apprenante, nourrie par leurs expériences de vie multiples. De nature joviale, souriante et attentionnée, ces traits m'aident à instaurer une relation de confiance et à encourager la réceptivité des apprenants tout au long du cours.</p>
+
+        <p>Enseigner dans deux cultures différentes a enrichi mes méthodes de transmission et diversifié ma pédagogie. Je suis convaincue que chaque apprenant a droit à un enseignement qui lui convienne, peu importe la méthode, tant qu'il en est satisfait et convaincu.</p>
+
+        <p>Titulaire d'une Maîtrise en lettres françaises et forte d'une douzaine d'années d'expérience auprès de publics variés — du débutant absolu au candidat à certification — je souhaite aujourd'hui mettre mon expertise au service de l'enseignement du français en ligne. La flexibilité de ce format me permettrait d'accompagner davantage d'apprenants, où qu'ils se trouvent, avec la même exigence et la même bienveillance.</p>
+
+        <p>Je me tiens à votre entière disposition pour un entretien et vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
+      </div>
+
+      <div class="letter-signature">Rania Bouchaala</div>
+    </div>
+
+    <div class="letter-footer">
+      <div class="letter-footer-bar"></div>
+      <span>Lettre de motivation — 2026</span>
+    </div>
+  </div>
+
+  <!-- ========== PAGE 2 : CV ========== -->
+  <div class="page">
+    <div class="header-bar"></div>
+    <div class="header-content">
+      <div>
+        <div class="header-name">Rania Bouchaala</div>
+        <div class="header-title">Enseignante de FLE & Formatrice en alphabétisation</div>
+      </div>
+      <div class="header-contact">
+        Bruxelles, Belgique<br>
+        <a href="mailto:bouchaalarania@gmail.com">bouchaalarania@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Intro -->
+      <div class="cv-highlight">
+        <p class="cv-highlight-text">«&nbsp;Accompagner chaque apprenant dans la maîtrise du français — de l'alphabétisation à la certification, avec humanité et exigence.&nbsp;»</p>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Profil</div>
+        <p class="cv-intro">
+          Titulaire d'une Maîtrise en lettres françaises avec plus de 12 ans d'expérience dans l'enseignement du français auprès de publics diversifiés (primaire, secondaire, adultes). Spécialiste de l'alphabétisation et des débutants absolus. Double culture franco-arabe, enseignement en immersion ou avec médiation linguistique. Maîtrise des outils collaboratifs et de l'enseignement à distance.
+        </p>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Expérience</div>
+        <div class="cv-grid">
+          <div class="cv-date">2020 — 2024</div>
+          <div class="cv-item">
+            <div class="cv-item-title">Formatrice en alphabétisation et FLE</div>
+            <div class="cv-item-place">Structure associative, Bruxelles</div>
+            <div class="cv-item-desc">Accompagnement de primo-arrivants et de publics en situation d'illettrisme. Gestion des supports pédagogiques sur Google Drive. Pédagogie différenciée sans référent scolaire.</div>
+          </div>
+
+          <div class="cv-date">2017 — 2018</div>
+          <div class="cv-item">
+            <div class="cv-item-title">Agente de voyage</div>
+            <div class="cv-item-place">Agence de tourisme international</div>
+            <div class="cv-item-desc">Organisation de voyages touristiques internationaux. Maîtrise du français de l'accueil et des affaires.</div>
+          </div>
+
+          <div class="cv-date">2015 — 2017</div>
+          <div class="cv-item">
+            <div class="cv-item-title">Enseignante de français</div>
+            <div class="cv-item-place">Établissements scolaires</div>
+            <div class="cv-item-desc">Enseignement du français langue première et seconde au primaire (5e année), au collège et au lycée. Construction des fondamentaux, acquisition des structures complexes.</div>
+          </div>
+
+          <div class="cv-date">2013 — 2014</div>
+          <div class="cv-item">
+            <div class="cv-item-title">Enseignante bilingue français-arabe</div>
+            <div class="cv-item-place">École primaire</div>
+            <div class="cv-item-desc">Enseignement du français et de l'arabe classique. Approche contrastive et immersion.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Formation</div>
+        <div class="cv-grid">
+          <div class="cv-date">2006 — 2011</div>
+          <div class="cv-item">
+            <div class="cv-item-title">Maîtrise de langue et littérature française</div>
+            <div class="cv-item-place">Faculté des Lettres et des Sciences Humaines</div>
+          </div>
+
+          <div class="cv-date">2021</div>
+          <div class="cv-item">
+            <div class="cv-item-title">Formation en intégration sociale et apprentissage du néerlandais</div>
+            <div class="cv-item-place">ASBL Bon, Bruxelles</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-two-col">
+        <div class="cv-section">
+          <div class="cv-section-title">Langues</div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">Français</div>
+            <div class="cv-skills-list">
+              <span class="cv-skill-tag lang">Langue maternelle / Expert</span>
+            </div>
+          </div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">Arabe</div>
+            <div class="cv-skills-list">
+              <span class="cv-skill-tag lang">Expert</span>
+            </div>
+          </div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">Anglais</div>
+            <div class="cv-skills-list">
+              <span class="cv-skill-tag lang">Compétent</span>
+            </div>
+          </div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">Néerlandais</div>
+            <div class="cv-skills-list">
+              <span class="cv-skill-tag lang">Notions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <div class="cv-section-title">Compétences</div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">Pédagogie</div>
+            <div class="cv-skills-list">
+              <span class="cv-skill-tag">Alphabétisation</span>
+              <span class="cv-skill-tag">FLE débutants A0-A1</span>
+              <span class="cv-skill-tag">Préparation certifications</span>
+              <span class="cv-skill-tag">Soutien scolaire</span>
+              <span class="cv-skill-tag">FOS</span>
+              <span class="cv-skill-tag">Médiation linguistique</span>
+            </div>
+          </div>
+          <div class="cv-skills-group">
+            <div class="cv-skills-label">Numérique</div>
+            <div class="cv-skills-list">
+              <span class="cv-skill-tag">Google Drive</span>
+              <span class="cv-skill-tag">Office 365</span>
+              <span class="cv-skill-tag">Enseignement à distance</span>
+              <span class="cv-skill-tag">Outils collaboratifs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-footer">
+      Curriculum Vitae — Rania Bouchaala — 2026
+    </div>
+  </div>
+
+</body>
+</html>
